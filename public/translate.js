@@ -227,7 +227,7 @@
   nlToEnMap.set(norm("Directe feedback en correctie in real-time"), "Real-Time Feedback & Correction");
 
   // Footer
-  nlToEnMap.set(norm("© 2025 Empower Your Core Alle rechten voorbehouden."), "© 2025 Empower Your Core All rights reserved.");
+  nlToEnMap.set(norm("© 2025 Empower Your Core Alle rechten voorbehouden."), "© 2025 Empower Your Core® All rights reserved.");
 
   // Testimonials section
   nlToEnMap.set(norm("Ervaringen van onze cliënten"), "Hear from our clients");
@@ -484,7 +484,7 @@
   nlToEnMap.set(norm("alles begint in de kern — ook jouw kern?"), "Everything begins at the center — yours too?");
 
   // ── Footer ──
-  nlToEnMap.set(norm("© 2025 Empower Your Core Alle rechten voorbehouden."), "© 2025 Empower Your Core All rights reserved.");
+  nlToEnMap.set(norm("© 2025 Empower Your Core Alle rechten voorbehouden."), "© 2025 Empower Your Core® All rights reserved.");
 
   // ── Pricing text ──
   nlToEnMap.set(norm("Losse Persoonlijke training Sessie"), "Single Personal Training Session");
@@ -4197,9 +4197,6 @@
      scales and responds exactly like the hamburger icon and the "ER" logo.
      Framer may recreate the nav on variant changes, so we re-insert via rAF. */
   function injectLangToggle() {
-    // English-only mode — no language toggle needed
-    // To re-enable bilingual toggle, remove this return statement
-    return;
     // Inject styles once
     if (!document.querySelector('#eyc-lang-styles')) {
       var style = document.createElement('style');
