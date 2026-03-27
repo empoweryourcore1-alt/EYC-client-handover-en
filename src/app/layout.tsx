@@ -12,9 +12,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteTitle = "Pilates Studio Utrecht";
+const siteTitle = "Empower Your Core® — Boutique Pilates Studio";
 const siteDescription =
-  "Empower Your Core® is een boutique Pilates studio in Utrecht, met personal training op maat om kracht, houding, mobiliteit en balans te verbeteren.";
+  "Empower Your Core® is a boutique Pilates studio offering personalised training to build strength, improve posture, mobility and balance.";
 
 export const metadata: Metadata = {
   title: siteTitle,
