@@ -3495,11 +3495,14 @@
       #scrollsection .eyc-premium-tagline,
       .eyc-premium-tagline {
         margin-top: 16px !important;
-        max-width: 30ch !important;
+        max-width: 100% !important;
+        width: 100% !important;
         line-height: 1.45 !important;
         font-size: 14px !important;
         color: rgba(234, 231, 225, 0.75) !important;
         letter-spacing: 0.02em !important;
+        text-align: center !important;
+        display: block !important;
       }
 
       #scrollsection .eyc-premium-tagline em,
@@ -3724,8 +3727,12 @@
         #scrollsection .eyc-premium-panel,
         .eyc-premium-panel {
           margin-top: 22px !important;
-          max-width: 100% !important;
+          max-width: calc(100vw - 65px) !important;
+          width: calc(100vw - 65px) !important;
           padding: 18px 0 0 !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+          box-sizing: border-box !important;
         }
 
         #scrollsection .eyc-premium-panel h3,
@@ -3744,10 +3751,15 @@
 
         #scrollsection .eyc-premium-tagline,
         .eyc-premium-tagline {
-          max-width: 24ch !important;
+          max-width: 100% !important;
+          width: 100% !important;
           font-size: 15px !important;
           line-height: 1.5 !important;
           margin-top: 14px !important;
+          text-align: center !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+          display: block !important;
         }
 
         #scrollsection .eyc-premium-chip b,
