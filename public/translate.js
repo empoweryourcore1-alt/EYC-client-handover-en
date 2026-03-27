@@ -4197,6 +4197,9 @@
      scales and responds exactly like the hamburger icon and the "ER" logo.
      Framer may recreate the nav on variant changes, so we re-insert via rAF. */
   function injectLangToggle() {
+    // English-only mode — no language toggle needed
+    // To re-enable bilingual toggle, remove this return statement
+    return;
     // Inject styles once
     if (!document.querySelector('#eyc-lang-styles')) {
       var style = document.createElement('style');
