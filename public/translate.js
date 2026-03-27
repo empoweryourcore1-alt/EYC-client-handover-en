@@ -3507,6 +3507,7 @@
         color: #c9a24a !important;
         font-style: normal !important;
         font-weight: 500 !important;
+        margin-right: 0.25em !important;
       }
 
       #scrollsection .eyc-premium-cta,
@@ -3972,7 +3973,7 @@
             <section class="eyc-premium-panel" aria-label="Priv\u00e9 studio">
               <h3>Stap binnen in onze priv\u00e9 Pilatesstudio in Utrecht</h3>
               <p>Volledig uitgerust en afgestemd op jou \u2014 waar transformatie begint met bewuste beweging.</p>
-              <div class="eyc-premium-tagline"><em>Exclusief.</em> Persoonlijk. Rustig. Doelgericht.</div>
+              <div class="eyc-premium-tagline"><em>Exclusief.</em>&nbsp;Persoonlijk. Rustig. Doelgericht.</div>
               <a class="eyc-premium-cta" href="/contact.html">Plan een intake</a>
               <div><small class="eyc-premium-cta-sub">Priv\u00e9sessies \u2022 Full Equipment \u2022 Utrecht</small></div>
             </section>
