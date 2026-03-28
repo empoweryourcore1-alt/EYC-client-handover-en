@@ -1,4 +1,4 @@
-# Empower Your Core - Production Website
+# Empower Your Core - Technical Handover
 
 **empoweryourcore.nl** | Pilates Studio Utrecht
 
@@ -6,7 +6,9 @@
 
 ## Overview
 
-Custom-engineered, high-performance website for Empower Your Core, a premium Pilates studio in Utrecht. Built as a hybrid architecture combining a design-first visual layer with a robust server-side rendering framework, delivering sub-second load times, full bilingual support, and pixel-perfect responsive behavior across all devices.
+Technical handover and maintenance guide for the Empower Your Core website. The project combines exported Framer layouts with a Next.js 15 application layer to deliver fast rendering, bilingual content management, and precise responsive behavior across mobile, tablet, and desktop.
+
+In this English handover repository, the homepage has already been partially hardened so the final production-facing structure for the premium intro, benefit video, process section, and studio clips lives directly in `public/index.html`.
 
 ---
 
@@ -25,20 +27,18 @@ Custom-engineered, high-performance website for Empower Your Core, a premium Pil
 
 ---
 
-## Codebase Metrics
+## Project Snapshot
 
-| Metric | Count |
-|--------|-------|
-| **Total lines of production code** | **12,641** |
-| Custom runtime engine (`translate.js`) | 4,629 lines |
-| Static page templates (HTML) | 7,747 lines |
-| React/TypeScript components | 265 lines |
-| API routes | 60 lines |
-| CSS architecture | 220 lines |
-| **Page count** | 14 pages |
-| **Translation mappings (NL/EN)** | 350+ entries |
-| **CSS override functions** | 9 specialized modules |
-| **Responsive breakpoints** | 4 (mobile, tablet, desktop, wide) |
+| Item | Status |
+|------|--------|
+| Public site pages | 14 routes |
+| Static Framer templates | 13 HTML templates |
+| Runtime engine | `public/translate.js` with 4,700+ lines |
+| Translation coverage | 350+ Dutch/English mappings |
+| Responsive system | 4 breakpoints |
+| Contact delivery | `Resend` via `src/app/api/contact/route.ts` |
+| Primary hosting target | Vercel |
+| Homepage hardening | Core EN homepage sections baked into `public/index.html` |
 
 ---
 
@@ -56,18 +56,18 @@ Custom-engineered, high-performance website for Empower Your Core, a premium Pil
             (Hydration layer)         Service
                     |
            Framer HTML Templates
-           (12 static pages)
+           (13 static templates)
                     |
-          translate.js Runtime Engine
-          (4,629 lines — DOM transforms,
-           i18n, responsive CSS, branding)
+          translate.js Runtime Support Layer
+          (i18n, responsive CSS,
+           branding, targeted DOM fixes)
 ```
 
 ### Key Architectural Decisions
 
 1. **Hybrid Rendering**: Framer's design-first visual output is wrapped in Next.js server components, giving us the best of both worlds — designer-quality visuals with enterprise-grade SSR, routing, and API capabilities.
 
-2. **Runtime Translation Engine**: A custom 4,600+ line JavaScript engine handles bilingual content (Dutch/English), real-time DOM manipulation, responsive CSS injection, and brand consistency enforcement — all without page reloads.
+2. **Runtime Support Layer**: `public/translate.js` handles bilingual content, responsive CSS injection, brand consistency enforcement, and targeted DOM fixes. In this English handover repo, the homepage's main premium sections are already stored in the base HTML to reduce runtime fragility.
 
 3. **Zero-Layout-Shift Design**: Custom CSS override system ensures pixel-perfect alignment across all viewport sizes. The hero card serves as the width reference (32.5px margin on mobile, 64px on desktop), with all sections mathematically aligned.
 
@@ -88,13 +88,14 @@ empoweryourcore.nl/
 |   |   |-- page.tsx                # Homepage
 |   |   |-- contact/page.tsx        # Contact page
 |   |   |-- pricing/page.tsx        # Pricing page
+|   |   |-- works/page.tsx          # Experiences index
 |   |   +-- works/[slug]/page.tsx   # Dynamic case study routing
 |   +-- globals.css                 # Global styles + Tailwind
 |-- public/
-|   |-- index.html                  # Homepage template
+|   |-- index.html                  # Homepage template with hardened EN premium sections
 |   |-- contact.html                # Contact form template
 |   |-- pricing.html                # Pricing template
-|   |-- translate.js                # Runtime engine (i18n + DOM + CSS)
+|   |-- translate.js                # Runtime support layer (i18n + responsive CSS + targeted fixes)
 |   |-- assets/                     # Video assets (Intro/Outro)
 |   +-- works/                      # 10 case study pages
 |-- next.config.ts                  # Cache control headers
@@ -129,6 +130,7 @@ empoweryourcore.nl/
 - **Performance**: Static generation + edge caching = sub-second TTFB globally
 - **Brand Consistency**: Automated enforcement of registered trademarks (Empower Your Core, EYC)
 - **Accessibility**: Semantic HTML, ARIA labels, keyboard navigation support
+- **Homepage Hardening**: The EN homepage intro, benefit video, process section, and studio clips are stored directly in the base HTML rather than rebuilt on every load
 
 ---
 
@@ -138,7 +140,7 @@ empoweryourcore.nl/
 # Install dependencies
 yarn install
 
-# Start development server (port 3000)
+# Start development server
 yarn dev
 
 # Production build
@@ -147,6 +149,14 @@ yarn build
 # Start production server
 yarn start
 ```
+
+### Local Preview Workflow
+
+- Use `yarn dev` for day-to-day editing and route checks
+- Use `yarn build` before handoff or deployment validation
+- Use `yarn start` after a successful build when you want a production-like local preview
+- `next.config.ts` disables the unstable `devtoolSegmentExplorer` experiment to keep local previews reliable in Next.js 15
+- When checking Framer pages locally, validate the iframe-rendered page itself, not only the outer Next.js wrapper
 
 ### Environment Variables
 
@@ -184,19 +194,21 @@ That's it. The contact form will now deliver emails to the studio inbox. No code
 
 ---
 
-## Deployment Pipeline (Recommended)
-
-**GitHub + Vercel** — both free tier, zero cost.
+## Deployment
 
 ```
-Developer pushes to GitHub
-         |
-  Vercel detects push (webhook)
-         |
-  Automatic build + deploy
-         |
-  Live on empoweryourcore.nl (< 60 seconds)
+Git repository
+      |
+ Vercel project
+      |
+ Build + deploy
+      |
+ Live site
 ```
+
+### Current Configuration
+
+`vercel.json` currently sets `"deploymentEnabled": false`, so automatic Git-based deployments are disabled by default. This means the safest current workflow is a manual production deploy.
 
 ### Setup (One-Time)
 
@@ -208,11 +220,12 @@ Developer pushes to GitHub
 ### Deploy
 
 ```bash
-# Option A: Automatic (recommended)
-git push origin main    # Vercel auto-deploys on push
-
-# Option B: Manual CLI
+# Option A: Manual CLI (current default)
 npx vercel --prod       # Direct deploy from local machine
+
+# Option B: Automatic
+# 1. Change vercel.json -> git.deploymentEnabled to true
+# 2. Push to main
 ```
 
 ### Why GitHub + Vercel?
@@ -220,39 +233,62 @@ npx vercel --prod       # Direct deploy from local machine
 | Benefit | Detail |
 |---------|--------|
 | **Free** | Both platforms offer generous free tiers for this project size |
-| **Automatic** | Push to `main` = instant production deploy |
+| **Automatic** | Available once `git.deploymentEnabled` is enabled |
 | **Global CDN** | Vercel serves from 80+ edge locations worldwide |
 | **Rollback** | One-click rollback to any previous deployment |
 | **Preview URLs** | Every pull request gets its own preview URL for testing |
 | **SSL** | Automatic HTTPS certificate provisioning and renewal |
 | **Analytics** | Built-in web analytics (page views, performance metrics) |
 
-Configuration in `vercel.json` enforces no-cache headers on dynamic content to ensure instant update propagation.
+`vercel.json` and `next.config.ts` enforce no-cache headers on `translate.js` and the static HTML entry points so content changes propagate immediately.
 
 ---
 
 ## Changing the Default Language
 
-The site defaults to **Dutch (NL)**. To switch the default to **English**:
+The site defaults to **English (EN)**. To switch the default to **Dutch**:
 
 1. Open `public/translate.js`
-2. Find **line 58**: `return "nl";`
-3. Change to: `return "en";`
-4. Commit and push — Vercel auto-deploys
+2. Find **line 58**: `return "en";`
+3. Change to: `return "nl";`
+4. Deploy using your preferred Vercel workflow
 
 That's the only change needed. Users who already chose a language via the toggle keep their preference (stored in browser localStorage).
 
 ---
 
-## Version Management
+## Cache Management
 
-The runtime engine (`translate.js`) uses a version string in its script tag for cache busting:
+The runtime engine (`translate.js`) is loaded with a version query string for cache busting:
 
 ```html
-<script src="/translate.js?v=2026-03-25-s12" defer></script>
+<script src="/translate.js?v=YYYY-MM-DD-vX" defer></script>
 ```
 
-Update this version string after any changes to `translate.js` to bypass browser caching.
+Update this version string after any `translate.js` change in:
+
+- `public/index.html`
+- `public/works/*.html`
+
+This is required to bypass browser caching after runtime text or layout changes.
+
+For major homepage HTML changes, update the same version string as part of the release so the iframe picks up the latest HTML entry point and runtime support file together.
+
+---
+
+## Homepage Maintenance
+
+For the English homepage, use a **base-first** workflow:
+
+1. Update `public/index.html` first for visible content and structure changes
+2. Only change `public/translate.js` when the update needs:
+   - translation coverage
+   - responsive CSS support
+   - a targeted runtime fix that cannot safely live in the base HTML
+3. Rebuild with `yarn build`
+4. Validate with `yarn start`
+
+This reduces the chance of legacy copy or outdated sections reappearing during hydration.
 
 ---
 

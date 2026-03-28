@@ -12,6 +12,7 @@ export default function FramerIframe({ src }: FramerIframeProps) {
   useEffect(() => {
     const iframe = iframeRef.current;
     if (!iframe) return;
+    let observerTeardown: number | null = null;
 
     const removeFramerUI = () => {
       const doc = iframe.contentDocument;
@@ -44,11 +45,16 @@ export default function FramerIframe({ src }: FramerIframeProps) {
       removeFramerUI();
       const doc = iframe.contentDocument;
       if (!doc) return;
+      if (observerTeardown) window.clearTimeout(observerTeardown);
       observer = new MutationObserver(removeFramerUI);
       observer.observe(doc.documentElement, {
         childList: true,
         subtree: true,
       });
+      observerTeardown = window.setTimeout(() => {
+        observer?.disconnect();
+        observer = null;
+      }, 5000);
     };
 
     const handleLoad = () => {
@@ -61,6 +67,7 @@ export default function FramerIframe({ src }: FramerIframeProps) {
 
     return () => {
       iframe.removeEventListener('load', handleLoad);
+      if (observerTeardown) window.clearTimeout(observerTeardown);
       observer?.disconnect();
     };
   }, [src]);
@@ -69,6 +76,7 @@ export default function FramerIframe({ src }: FramerIframeProps) {
     <iframe
       ref={iframeRef}
       src={src}
+      aria-label="Empower Your Core®"
       allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
       style={{
         width: '100%',
@@ -84,7 +92,6 @@ export default function FramerIframe({ src }: FramerIframeProps) {
         margin: 0,
         padding: 0,
       }}
-      title="Empower Your Core"
     />
   );
 }

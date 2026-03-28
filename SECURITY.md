@@ -11,7 +11,7 @@
 If you discover a security vulnerability in this project, please report it responsibly:
 
 1. **Do not** create a public GitHub issue
-2. Email **contact@empoweryourcore.com** with details
+2. Email **hi@empoweryourcore.com** with details
 3. Include steps to reproduce the vulnerability
 4. Allow 48 hours for an initial response
 
@@ -23,9 +23,9 @@ This project implements the following security practices:
 - **Server-side API routes**: Contact form submissions are processed via Next.js API routes, never exposed to the client
 - **Input sanitization**: All form inputs are validated and sanitized before processing
 - **HTTPS only**: Enforced via Vercel's automatic SSL provisioning
-- **No database exposure**: Static content architecture eliminates SQL injection vectors
-- **Content Security Policy**: Headers configured via `next.config.ts`
-- **Dependency auditing**: Regular `npm audit` checks for known vulnerabilities
+- **Reduced attack surface**: Static content architecture avoids unnecessary database or session exposure
+- **Cache control for critical runtime assets**: `translate.js` and static HTML entry points are served with no-cache headers
+- **Dependency auditing**: Regular `yarn npm audit` checks for known vulnerabilities
 
 ## Environment Variables
 

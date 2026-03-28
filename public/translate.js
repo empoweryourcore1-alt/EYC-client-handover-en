@@ -198,7 +198,7 @@
   nlToEnMap.set(norm("opleiding voor pilatesdocenten"), "Teacher Training Program");
   nlToEnMap.set(norm("Persoonlijke Training"), "Personal Training");
   nlToEnMap.set(norm("persoonlijke training"), "Personal Training");
-  nlToEnMap.set(norm("Persoonlijke training bij Empower Your Core"), "Personal Training at Empower Your Core");
+  nlToEnMap.set(norm("Persoonlijke training bij Empower Your Core"), "Personal Training at Empower Your Core®");
   nlToEnMap.set(norm("Online training"), "Online Training");
   nlToEnMap.set(norm("Bedrijfswelzijn"), "Corporate Wellness");
   nlToEnMap.set(norm("Vragen? We helpen je graag."), "Have questions or need help? We're here for you");
@@ -231,9 +231,9 @@
 
   // Testimonials section
   nlToEnMap.set(norm("Ervaringen van onze cliënten"), "Hear from our clients");
-  nlToEnMap.set(norm("Je hebt gezien hoe wij werken. Nu hoor je van mensen die het zelf hebben meegemaakt."), "We've shown you how we work—now listen to those who've experienced it.");
+  nlToEnMap.set(norm("Je hebt gezien hoe wij werken. Nu hoor je van mensen die het zelf hebben meegemaakt."), "We've shown you how we work — now listen to those who've experienced it.");
   nlToEnMap.set(norm("Hun ervaringen tonen wat mogelijk is. Nu is het tijd voor jouw volgende stap. Verbind je met ons en begin de reis."), "Their stories show what's possible — now it's your turn. Connect with us and join the journey.");
-  nlToEnMap.set(norm("Deze getuigenissen zijn opgenomen onder onze vorige naam, True and Pure Pilates – nu met trots Empower Your Core."), "These testimonials were recorded under our previous name, True and Pure Pilates - now proudly Empower Your Core.");
+  nlToEnMap.set(norm("Deze getuigenissen zijn opgenomen onder onze vorige naam, True and Pure Pilates – nu met trots Empower Your Core."), "These testimonials were recorded under our previous name, True and Pure Pilates - now proudly Empower Your Core®.");
 
   // About us / method
   nlToEnMap.set(norm("Natuurlijke beweging staat voorop"), "Natural Movement Comes First");
@@ -241,6 +241,8 @@
   nlToEnMap.set(norm("Een innovatieve methode voor moderne lichamen"), "An Innovative Method for Modern Bodies");
   nlToEnMap.set(norm("De uitdaging"), "Understanding the Challenge");
   nlToEnMap.set(norm("Het resultaat"), "The Results");
+  nlToEnMap.set(norm("Transformatie begint met de juiste middelen - ontdek hoe wij jou kunnen ondersteunen."), "Transformations begin with the right tools — here's how we can help you.");
+  nlToEnMap.set(norm("transformatie begint met de juiste middelen - ontdek hoe wij jou kunnen ondersteunen."), "Transformations begin with the right tools — here's how we can help you.");
   nlToEnMap.set(norm("Observeer"), "Observe");
   nlToEnMap.set(norm("Verfijn"), "Refine");
   nlToEnMap.set(norm("Inspireer"), "Inspire");
@@ -252,6 +254,7 @@
   // Premium intro section (applyHomeDocxIntro hardcoded Dutch)
   nlToEnMap.set(norm("Empower Your Core is geen trend."), "Empower Your Core\u00AE is not a trend.");
   nlToEnMap.set(norm("Empower Your Core\u00AE is geen trend."), "Empower Your Core\u00AE is not a trend.");
+  nlToEnMap.set(norm("is geen trend."), "is not a trend.");
   nlToEnMap.set(norm("Het is een methode met blijvende waarde."), "It is a method with lasting value.");
   nlToEnMap.set(norm("Gebouwd op 15 jaar ervaring en verdieping. Met bewezen strategie\u00ebn die je helpen pijn te verminderen, kracht op te bouwen, je mobiliteit te verbeteren en opnieuw met vertrouwen te bewegen."), "Built on 15 years of expertise and depth. Evidence-based strategies that help you reduce pain, build strength, improve mobility and move with confidence again.");
   nlToEnMap.set(norm("Pijn verminderen"), "Reduce pain");
@@ -267,7 +270,9 @@
   nlToEnMap.set(norm("vertrouwen"), "Confidence");
   nlToEnMap.set(norm("controle & consistentie"), "control & consistency");
   nlToEnMap.set(norm("Stap binnen in onze priv\u00e9 Pilatesstudio in Utrecht"), "Step into our private Pilates Studio in Utrecht");
+  nlToEnMap.set(norm("Volledig uitgerust en afgestemd op jou"), "Fully equipped and tailored to you");
   nlToEnMap.set(norm("Volledig uitgerust en afgestemd op jou \u2014 waar transformatie begint met bewuste beweging."), "Fully equipped and tailored to you \u2014 where transformation begins with mindful movement.");
+  nlToEnMap.set(norm("waar transformatie begint met bewuste beweging."), "where transformation begins with mindful movement.");
   nlToEnMap.set(norm("Exclusief."), "Exclusive.");
   nlToEnMap.set(norm("Persoonlijk. Rustig. Doelgericht."), "Personal. Calm. Purposeful.");
   nlToEnMap.set(norm("Plan een intake"), "Book an intake");
@@ -292,10 +297,10 @@
 
   // Contact / form
   nlToEnMap.set(norm("Klaar om jouw reis te beginnen? Stuur ons een e-mail om een vraag te stellen of je eerste sessie te boeken."), "Ready to start your journey? Send us an email to ask a question or book your first session.");
-  nlToEnMap.set(norm("Neem vandaag nog contact met ons op en ontdek wat Persoonlijke training bij Empower Your Core voor jou kan betekenen."), "Contact us today and find out what Personal Training at Empower Your Core can do for you!");
+  nlToEnMap.set(norm("Neem vandaag nog contact met ons op en ontdek wat Persoonlijke training bij Empower Your Core voor jou kan betekenen."), "Contact us today and find out what Personal Training at Empower Your Core® can do for you!");
 
   // ── ABOUT US page: ABOUT_US_INTRO_HTML ──
-  nlToEnMap.set(norm("Ontdek het verhaal achter Empower Your Core. Leer hoe oprichter Mohammed Rahali de klassieke Pilates-methode transformeerde tot een innovatieve, evidence-based praktijk, gericht op betekenisvolle beweging en duurzame resultaten."), "Discover the story behind Empower Your Core. Learn how founder Mohammed Rahali transformed the classical Pilates method into an innovative, evidence-based practice focused on meaningful movement and lasting results.");
+  nlToEnMap.set(norm("Ontdek het verhaal achter Empower Your Core. Leer hoe oprichter Mohammed Rahali de klassieke Pilates-methode transformeerde tot een innovatieve, evidence-based praktijk, gericht op betekenisvolle beweging en duurzame resultaten."), "Discover the story behind Empower Your Core®. Learn how founder Mohammed Rahali transformed the classical Pilates method into an innovative, evidence-based practice focused on meaningful movement and lasting results.");
 
   // ── ABOUT US page: ABOUT_US_BODY_HTML paragraphs ──
   nlToEnMap.set(norm("Empower Your Core is ontwikkeld door Mohammed Rahali: methode-ontwikkelaar en ondernemer. Geboren en getogen in Nederland, kwam Mohammed in Los Angeles voor het eerst in aanraking met de klassieke Pilatesmethode. Na een intensieve opleiding, de oprichting van zijn eigen studio True and Pure Pilates en jarenlange praktijkervaring, raakte hij ervan overtuigd dat het tijd was voor innovatie."), "Empower Your Core was developed by Mohammed Rahali: method developer and entrepreneur. Born and raised in the Netherlands, Mohammed first encountered the classical Pilates method in Los Angeles. After intensive training, founding his own studio True and Pure Pilates, and years of hands-on experience, he became convinced it was time for innovation.");
@@ -312,7 +317,7 @@
 
   // ── ABOUT US: applyCriticalCopyReplacements output strings ──
   nlToEnMap.set(norm("De Oprichter & De Visie"), "The Founder & The Vision");
-  nlToEnMap.set(norm("Ontdek het verhaal achter Empower Your Core. Lees hoe oprichter Mohammed klassieke Pilates doorontwikkelde tot een innovatieve, evidence-based methode gericht op betekenisvolle beweging en blijvende resultaten."), "Discover the story behind Empower Your Core. Learn how founder Mohammed evolved classical Pilates into an innovative, evidence-based method focused on meaningful movement and lasting results.");
+  nlToEnMap.set(norm("Ontdek het verhaal achter Empower Your Core. Lees hoe oprichter Mohammed klassieke Pilates doorontwikkelde tot een innovatieve, evidence-based methode gericht op betekenisvolle beweging en blijvende resultaten."), "Discover the story behind Empower Your Core®. Learn how founder Mohammed evolved classical Pilates into an innovative, evidence-based method focused on meaningful movement and lasting results.");
   nlToEnMap.set(norm("Empower Your Core is ontwikkeld door Mohammed, methodeontwikkelaar en ondernemer."), "Empower Your Core was developed by Mohammed, a method developer and entrepreneur.");
   nlToEnMap.set(norm("Geboren en opgegroeid in Nederland kwam Mohammed in Los Angeles voor het eerst in aanraking met de klassieke Pilatesmethode."), "Born and raised in the Netherlands, Mohammed first encountered the classical Pilates method in Los Angeles.");
   nlToEnMap.set(norm("Na intensieve opleiding, het oprichten van zijn eigen studio True and Pure Pilates, en jarenlange praktijkervaring, raakte hij ervan overtuigd dat het tijd was voor innovatie."), "After intensive training, founding his own studio True and Pure Pilates, and years of practical experience, he became convinced it was time for innovation.");
@@ -359,7 +364,7 @@
   nlToEnMap.set(norm("Meer informatie"), "More information");
   nlToEnMap.set(norm("meer informatie"), "More information");
   nlToEnMap.set(norm("Wil je meer weten over het programma, de inhoud en de aanmelding?"), "Would you like to know more about the programme, the content, and how to enrol?");
-  nlToEnMap.set(norm("Bezoek de website van Empower Your Core Academy:"), "Visit the Empower Your Core Academy website:");
+  nlToEnMap.set(norm("Bezoek de website van Empower Your Core Academy:"), "Visit the Empower Your Core Academy website: ");
 
   // ── howWeWorkSteps (replaceProcessSection) — texts differ from existing entries ──
   nlToEnMap.set(norm("We bekijken hoe je beweegt en waar je lichaam ondersteuning nodig heeft."), "We look at how you move and where your body needs support.");
@@ -474,7 +479,7 @@
 
   // ── Testimonials section ──
   nlToEnMap.set(norm("Ervaringen van onze cliënten"), "Hear from our clients");
-  nlToEnMap.set(norm("Deze getuigenissen zijn opgenomen onder onze vorige naam, True and Pure Pilates – nu met trots Empower Your Core."), "These testimonials were recorded under our previous name, True and Pure Pilates — now proudly Empower Your Core.");
+  nlToEnMap.set(norm("Deze getuigenissen zijn opgenomen onder onze vorige naam, True and Pure Pilates – nu met trots Empower Your Core."), "These testimonials were recorded under our previous name, True and Pure Pilates — now proudly Empower Your Core®.");
 
   // ── Home story intro / benefit text ──
   nlToEnMap.set(norm("Het aanbod is pas het startpunt."), "What we offer is just the starting point.");
@@ -558,7 +563,7 @@
   // "Deze getuigenissen" disclaimer with ® variants (appears on all case study pages)
   nlToEnMap.set(norm("Deze getuigenissen zijn opgenomen onder onze vorige naam, True and Pure Pilates \u2013 nu met trots Empower Your Core\u00AE."), "These testimonials were recorded under our previous name, True and Pure Pilates \u2014 now proudly Empower Your Core\u00AE.");
   nlToEnMap.set(norm("\"Deze getuigenissen zijn opgenomen onder onze vorige naam, True and Pure Pilates \u2013 nu met trots Empower Your Core\u00AE.\""), "\"These testimonials were recorded under our previous name, True and Pure Pilates \u2014 now proudly Empower Your Core\u00AE.\"");
-  nlToEnMap.set(norm("\"Deze getuigenissen zijn opgenomen onder onze vorige naam, True and Pure Pilates \u2013 nu met trots Empower Your Core.\""), "\"These testimonials were recorded under our previous name, True and Pure Pilates \u2014 now proudly Empower Your Core.\"");
+  nlToEnMap.set(norm("\"Deze getuigenissen zijn opgenomen onder onze vorige naam, True and Pure Pilates \u2013 nu met trots Empower Your Core.\""), "\"These testimonials were recorded under our previous name, True and Pure Pilates \u2014 now proudly Empower Your Core®.\"");
   nlToEnMap.set(norm("\u201CDeze getuigenissen zijn opgenomen onder onze vorige naam, True and Pure Pilates \u2013 nu met trots Empower Your Core\u00AE.\u201D"), "\u201CThese testimonials were recorded under our previous name, True and Pure Pilates \u2014 now proudly Empower Your Core\u00AE.\u201D");
 
   // Personal training page - combined paragraphs with ® variants
@@ -569,7 +574,7 @@
 
   // Gym burnout (Anneke) combined paragraphs
   nlToEnMap.set(norm("Vanaf de allereerste proefles lag onze focus op het leggen van een persoonlijke connectie en het tonen van de diepgang van de Empower Your Core\u00AE methode. De cli\u00ebnte was direct gegrepen door de intense focus en de tijd die werd genomen om haar achtergrond en interesses te begrijpen. Dit legde een fundament van vertrouwen en betrokkenheid dat een reguliere sportschool simpelweg niet kan bieden."), "From the very first trial session, our focus was on building a personal connection and demonstrating the depth of the Empower Your Core\u00AE method. The client was immediately fascinated by the instructor's intense focus and the time he took to understand her personal history and interests. This created a foundation of trust and engagement that a conventional gym couldn't offer.");
-  nlToEnMap.set(norm("Vanaf de allereerste proefles lag onze focus op het leggen van een persoonlijke connectie en het tonen van de diepgang van de Empower Your Core methode. De cli\u00ebnte was direct gegrepen door de intense focus en de tijd die werd genomen om haar achtergrond en interesses te begrijpen. Dit legde een fundament van vertrouwen en betrokkenheid dat een reguliere sportschool simpelweg niet kan bieden."), "From the very first trial session, our focus was on building a personal connection and demonstrating the depth of the Empower Your Core method. The client was immediately fascinated by the instructor's intense focus and the time he took to understand her personal history and interests. This created a foundation of trust and engagement that a conventional gym couldn't offer.");
+  nlToEnMap.set(norm("Vanaf de allereerste proefles lag onze focus op het leggen van een persoonlijke connectie en het tonen van de diepgang van de Empower Your Core methode. De cli\u00ebnte was direct gegrepen door de intense focus en de tijd die werd genomen om haar achtergrond en interesses te begrijpen. Dit legde een fundament van vertrouwen en betrokkenheid dat een reguliere sportschool simpelweg niet kan bieden."), "From the very first trial session, our focus was on building a personal connection and demonstrating the depth of the Empower Your Core® method. The client was immediately fascinated by the instructor's intense focus and the time he took to understand her personal history and interests. This created a foundation of trust and engagement that a conventional gym couldn't offer.");
 
   // Rolf combined paragraphs (desktop variant - 3 sentences merged into one text node)
   nlToEnMap.set(norm("Toen Rolfs vrouw voorstelde om Pilates te proberen, was hij een rasechte scepticus: \"Ik dacht dat het iets zweverigs was,\" geeft hij toe. Hij kampte met een frustrerende kettingreactie van chronische pijn die begon in zijn knie\u00ebn en doorstraalde naar zijn heup, met een stijve rug en terugkerende beenpijn tot gevolg. Hij zocht een oplossing die de kern van zijn klachten aanpakte en hem zijn actieve levensstijl teruggaf."), "When Rolf's wife suggested he try Pilates, he was a true sceptic, admitting, \"I thought it was something esoteric.\" He was dealing with a frustrating chain reaction of chronic pain that started in his knees and radiated to his hip, causing a stiff back and frequent leg pain. He needed a solution that could address the root cause of his interconnected issues and get him back to the active lifestyle he loved.");
@@ -1231,20 +1236,19 @@
   `;
   const TEACHER_TRAINING_BODY_HTML = `
     <h4 class="framer-text framer-styles-preset-1jfyso">Een Nieuwe Standaard in Bewegingseducatie</h4>
-    <p class="framer-text framer-styles-preset-saf75d"><strong class="framer-text">${TEACHER_TRAINING_NOTICE_TEXT}</strong></p>
+    <p class="framer-text framer-styles-preset-saf75d"><strong class="framer-text framer-styles-preset-saf75d" style="color:inherit;-webkit-text-fill-color:inherit;">${TEACHER_TRAINING_NOTICE_TEXT}</strong></p>
     <p class="framer-text framer-styles-preset-saf75d">Het trainingsprogramma van Empower Your Core Academy is ontstaan uit persoonlijke frustratie. Tijdens mijn eigen opleiding kreeg ik een boek met foto's en vage uitleg. Er zat weinig logica in en veel dingen moest ik zelf uitzoeken.</p>
     <p class="framer-text framer-styles-preset-saf75d">Daarom krijgen mijn studenten juist het tegenovergestelde.</p>
     <p class="framer-text framer-styles-preset-saf75d">Bij Empower Your Core Academy werken we met een duidelijk en gestructureerd programma. Elke oefening wordt uitgelegd: wat je doet, waarom je het doet en hoe het werkt in het lichaam. Zo wordt wat vaak vaag blijft, een duidelijke en effectieve methode.</p>
-    <h4 class="framer-text framer-styles-preset-1jfyso" style="margin-top:1.2em;margin-bottom:0.6em;">Onze Basisprincipes</h4>
-    <ul class="framer-text" style="margin:0 0 0.8em 0;padding-left:1.4em;list-style:disc;">
-      <li class="framer-text" style="margin-bottom:0.5em;"><strong class="framer-text">Logische opbouw:</strong> De opleiding bouwt stap voor stap op: van basisprincipes naar meer gevorderde toepassingen.</li>
-      <li class="framer-text" style="margin-bottom:0.5em;"><strong class="framer-text">Direct toepasbaar:</strong> Door praktische oefeningen en duidelijke richtlijnen kun je de kennis meteen gebruiken in de praktijk.</li>
+    <h4 class="framer-text framer-styles-preset-1jfyso" style="margin-top:0.65em;margin-bottom:1.35em;">Onze Basisprincipes</h4>
+    <ul class="framer-text framer-styles-preset-saf75d" style="margin:0 0 0.2em 0;padding-left:1.4em;list-style:disc;color:rgba(255,255,255,0.9);-webkit-text-fill-color:rgba(255,255,255,0.9);white-space:normal;">
+      <li class="framer-text framer-styles-preset-saf75d" style="margin-bottom:0.45em;color:inherit;-webkit-text-fill-color:inherit;white-space:normal;"><strong class="framer-text framer-styles-preset-saf75d" style="color:inherit;-webkit-text-fill-color:inherit;white-space:normal;">Logische opbouw:</strong> De opleiding bouwt stap voor stap op: van basisprincipes naar meer gevorderde toepassingen.</li><li class="framer-text framer-styles-preset-saf75d" style="margin-bottom:0;color:inherit;-webkit-text-fill-color:inherit;white-space:normal;"><strong class="framer-text framer-styles-preset-saf75d" style="color:inherit;-webkit-text-fill-color:inherit;white-space:normal;">Direct toepasbaar:</strong> Door praktische oefeningen en duidelijke richtlijnen kun je de kennis meteen gebruiken in de praktijk.</li>
     </ul>
-    <h4 class="framer-text framer-styles-preset-1jfyso" style="margin-top:1.2em;margin-bottom:0.5em;">Het Resultaat</h4>
+    <h4 class="framer-text framer-styles-preset-1jfyso" style="margin-top:0.65em;margin-bottom:0.5em;">Het Resultaat</h4>
     <p class="framer-text framer-styles-preset-saf75d">Onze studenten voelen niet alleen wat ze doen — ze begrijpen ook waarom het werkt. Daardoor kunnen ze met meer zekerheid, precisie en vertrouwen werken met hun eigen cliënten.</p>
     <h4 class="framer-text framer-styles-preset-1jfyso">Meer informatie</h4>
     <p class="framer-text framer-styles-preset-saf75d">Wil je meer weten over het programma, de inhoud en de aanmelding?</p>
-    <p class="framer-text framer-styles-preset-saf75d">Bezoek de website van Empower Your Core Academy: <a class="framer-text" href="https://www.eycacademy.com" target="_blank" rel="noreferrer noopener">www.eycacademy.com</a></p>
+    <p class="framer-text framer-styles-preset-saf75d">Bezoek de website van Empower Your Core Academy: <a class="framer-text framer-styles-preset-saf75d" style="color:inherit;-webkit-text-fill-color:inherit;" href="https://www.eycacademy.com" target="_blank" rel="noreferrer noopener">www.eycacademy.com</a></p>
   `;
 
   function selectSelfOrDescendant(root, selector) {
@@ -1632,9 +1636,29 @@
   function replaceProcessSection(root) {
     /* lang-aware: fix functions run for both NL and EN */
     if (!root || !root.querySelector) return;
-    const points = root.querySelector('[data-framer-name="Points"]');
-    if (!points || points.querySelector('[data-eyc-process-html="true"]')) return;
     ensureHowWeWorkStyles();
+    const points = root.querySelector('[data-framer-name="Points"]');
+    if (!points) return;
+
+    const parentBlocks = [
+      points.parentElement,
+      points.closest(".framer-1laf7k2"),
+      points.closest(".framer-1vorql8"),
+      points.closest(".framer-bbt7ix"),
+      points.closest(".framer-1vq7ieh"),
+    ];
+
+    if (points.querySelector('[data-eyc-process-html="true"]')) {
+      points.classList.add("eyc-how-unclip");
+      parentBlocks.forEach((block) => {
+        if (block && block.classList) block.classList.add("eyc-how-unclip");
+      });
+      if (points.parentElement && points.parentElement.classList) {
+        points.parentElement.classList.add("eyc-home-flow-shell", "eyc-how-shell");
+      }
+      return;
+    }
+
     points.classList.add("eyc-how-unclip");
     points.innerHTML = "";
     const section = document.createElement("section");
@@ -1676,14 +1700,6 @@
     section.appendChild(wrap);
     section.setAttribute("data-eyc-process-html", "true");
     points.appendChild(section);
-
-    const parentBlocks = [
-      points.parentElement,
-      points.closest(".framer-1laf7k2"),
-      points.closest(".framer-1vorql8"),
-      points.closest(".framer-bbt7ix"),
-      points.closest(".framer-1vq7ieh"),
-    ];
 
     parentBlocks.forEach((block) => {
       if (block && block.classList) block.classList.add("eyc-how-unclip");
@@ -2261,8 +2277,51 @@
   }
 
   /** Insert 3 studio clip videos between "03 TRANSFORMEREN" and testimonials intro */
+  function ensureStudioClipsStyle() {
+    if (document.getElementById("eyc-studio-clips-style")) return;
+
+    var style = document.createElement("style");
+    style.id = "eyc-studio-clips-style";
+    style.textContent = "\
+      /* Reduce spacing around studio clips */\
+      #eyc-studio-clips {\
+        margin-bottom: 0 !important;\
+        width: 100% !important;\
+      }\
+      #eyc-studio-clips > div {\
+        width: 100% !important;\
+      }\
+      #eyc-studio-clips iframe {\
+        min-width: 0 !important;\
+        width: 100% !important;\
+      }\
+      @media (max-width: 809px) {\
+        #eyc-studio-clips {\
+          margin-bottom: 0 !important;\
+          width: calc(100vw - 65px) !important;\
+          margin-left: 0px !important;\
+        }\
+        #eyc-studio-clips > div {\
+          flex-direction: column !important;\
+          gap: 12px !important;\
+          padding: 0 !important;\
+          margin: 20px 0 !important;\
+          width: 100% !important;\
+        }\
+        #eyc-studio-clips iframe {\
+          height: auto !important;\
+          aspect-ratio: 16/9 !important;\
+          width: 100% !important;\
+          border-radius: 12px !important;\
+        }\
+      }\
+    ";
+    document.head.appendChild(style);
+  }
+
   function insertStudioClips() {
     if (!isHomePath()) return;
+    ensureStudioClipsStyle();
     if (document.getElementById("eyc-studio-clips")) return;
 
     // Find TRANSFORMEREN card, walk up to its section, insert clips after it
@@ -2297,47 +2356,6 @@
       row.appendChild(frame);
     });
     container.appendChild(row);
-
-    // Add responsive style for mobile: stack vertically
-    if (!document.getElementById("eyc-studio-clips-style")) {
-      var style = document.createElement("style");
-      style.id = "eyc-studio-clips-style";
-      style.textContent = "\
-        /* Reduce spacing around studio clips */\
-        #eyc-studio-clips {\
-          margin-bottom: 0 !important;\
-          width: 100% !important;\
-        }\
-        #eyc-studio-clips > div {\
-          width: 100% !important;\
-        }\
-        #eyc-studio-clips iframe {\
-          min-width: 0 !important;\
-          width: 100% !important;\
-        }\
-        @media (max-width: 809px) {\
-          #eyc-studio-clips {\
-            margin-bottom: 0 !important;\
-            width: calc(100vw - 65px) !important;\
-            margin-left: 0px !important;\
-          }\
-          #eyc-studio-clips > div {\
-            flex-direction: column !important;\
-            gap: 12px !important;\
-            padding: 0 !important;\
-            margin: 20px 0 !important;\
-            width: 100% !important;\
-          }\
-          #eyc-studio-clips iframe {\
-            height: auto !important;\
-            aspect-ratio: 16/9 !important;\
-            width: 100% !important;\
-            border-radius: 12px !important;\
-          }\
-        }\
-      ";
-      document.head.appendChild(style);
-    }
 
     // Insert AFTER the target (after the 01/02/03 cards section)
     target.parentElement.insertBefore(container, target.nextSibling);
@@ -2706,9 +2724,35 @@
     });
   }
 
+  function getPathname() {
+    return (window.location && window.location.pathname) ? window.location.pathname.toLowerCase() : "";
+  }
+
   function isHomePath() {
-    const pathname = (window.location && window.location.pathname) ? window.location.pathname.toLowerCase() : "";
+    const pathname = getPathname();
     return pathname === "/" || pathname.endsWith("/index.html");
+  }
+
+  function isContactPath() {
+    const pathname = getPathname();
+    return pathname.endsWith("/contact") || pathname.endsWith("/contact.html");
+  }
+
+  function isPricingPath() {
+    const pathname = getPathname();
+    return pathname.endsWith("/pricing") || pathname.endsWith("/pricing.html");
+  }
+
+  function isTeacherTrainingPath() {
+    return getPathname().includes("/teacher-training");
+  }
+
+  function isPersonalTrainingPath() {
+    return getPathname().includes("/personal-training");
+  }
+
+  function isAboutUsPath() {
+    return getPathname().includes("/about-us");
   }
 
   function fixHomeKickerPunctuation(root) {
@@ -3345,6 +3389,16 @@
         height: 0 !important;
       }
 
+      /* ® mark: subtle, proportional to surrounding text */
+      .eyc-reg {
+        font-size: 0.45em !important;
+        vertical-align: super !important;
+        line-height: 0 !important;
+        font-weight: 400 !important;
+        letter-spacing: 0 !important;
+        margin-left: 0.05em !important;
+      }
+
       #scrollsection .eyc-premium-title,
       .eyc-premium-title {
         display: block !important;
@@ -3359,6 +3413,16 @@
         -webkit-text-fill-color: #c9a24a !important;
         text-shadow: 0 8px 26px rgba(0, 0, 0, 0.45) !important;
         white-space: normal !important;
+      }
+
+      #scrollsection .eyc-premium-title > span,
+      .eyc-premium-title > span {
+        display: block !important;
+      }
+
+      #scrollsection .eyc-premium-title-tail,
+      .eyc-premium-title-tail {
+        margin-top: 0.02em !important;
       }
 
       #scrollsection .eyc-premium-sub,
@@ -3492,17 +3556,52 @@
         -webkit-text-fill-color: #f0ece5 !important;
       }
 
+      #scrollsection .eyc-premium-panel p,
+      .eyc-premium-panel p {
+        margin: 0 auto !important;
+        max-width: 40ch !important;
+        font-size: clamp(15px, 1.32vw, 17px) !important;
+        line-height: 1.54 !important;
+      }
+
+      #scrollsection .eyc-premium-panel-copy-line,
+      .eyc-premium-panel-copy-line {
+        display: block !important;
+      }
+
+      #scrollsection .eyc-premium-panel-copy-line + .eyc-premium-panel-copy-line,
+      .eyc-premium-panel-copy-line + .eyc-premium-panel-copy-line {
+        margin-top: 0.12em !important;
+      }
+
+      @media (min-width: 811px) {
+        #scrollsection .eyc-premium-panel h3,
+        .eyc-premium-panel h3 {
+          width: fit-content !important;
+          max-width: none !important;
+          white-space: nowrap !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+
+        #scrollsection .eyc-premium-panel-copy-line,
+        .eyc-premium-panel-copy-line {
+          white-space: nowrap !important;
+        }
+      }
+
       #scrollsection .eyc-premium-tagline,
       .eyc-premium-tagline {
         margin-top: 16px !important;
+        width: fit-content !important;
         max-width: 100% !important;
-        width: 100% !important;
         line-height: 1.45 !important;
         font-size: 14px !important;
         color: rgba(234, 231, 225, 0.75) !important;
         letter-spacing: 0.02em !important;
-        text-align: center !important;
-        display: block !important;
+        white-space: nowrap !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
       }
 
       #scrollsection .eyc-premium-tagline em,
@@ -3515,18 +3614,18 @@
 
       #scrollsection .eyc-premium-cta,
       .eyc-premium-cta {
-        display: inline-flex !important;
+        display: flex !important;
         align-items: center !important;
         justify-content: center !important;
         gap: 0 !important;
-        width: auto !important;
+        width: fit-content !important;
         max-width: 100% !important;
         min-height: 50px !important;
         margin-top: 22px !important;
         padding: 12px 26px !important;
         border-radius: 999px !important;
         border: 1px solid rgba(201, 162, 74, 0.35) !important;
-        background: linear-gradient(180deg, rgba(201, 162, 74, 0.16), rgba(201, 162, 74, 0.06)) !important;
+        background: linear-gradient(180deg, rgba(201, 162, 74, 0.26), rgba(201, 162, 74, 0.14)) !important;
         color: #f0ece5 !important;
         text-decoration: none !important;
         font-size: 16px !important;
@@ -3671,7 +3770,7 @@
           max-width: calc(100vw - 65px) !important;
           margin-left: auto !important;
           margin-right: auto !important;
-          padding: 36px 14px 40px !important;
+          padding: 36px 0 40px !important;
           border-radius: 18px !important;
         }
 
@@ -3727,11 +3826,11 @@
         #scrollsection .eyc-premium-panel,
         .eyc-premium-panel {
           margin-top: 22px !important;
-          max-width: calc(100vw - 65px) !important;
-          width: calc(100vw - 65px) !important;
+          max-width: 100% !important;
+          width: 100% !important;
           padding: 18px 0 0 !important;
-          margin-left: auto !important;
-          margin-right: auto !important;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
           box-sizing: border-box !important;
         }
 
@@ -3743,7 +3842,7 @@
         #scrollsection .eyc-premium-panel p,
         .eyc-premium-panel p {
           font-size: 15px !important;
-          line-height: 1.6 !important;
+          line-height: 1.55 !important;
           max-width: 36ch !important;
           margin-left: auto !important;
           margin-right: auto !important;
@@ -3791,6 +3890,9 @@
           width: min(100%, 320px) !important;
           min-height: 52px !important;
           margin-top: 20px !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+          display: flex !important;
           padding: 12px 20px !important;
           font-size: clamp(16px, 4.6vw, 18px) !important;
           line-height: 1.2 !important;
@@ -3923,7 +4025,7 @@
     if (!root || !root.querySelectorAll) return;
     if (!isHomePath()) return;
     ensureHomeDocxIntroStyle();
-    const premiumIntroVersion = "2026-03-14-v8";
+    const premiumIntroVersion = "2026-03-28-v4";
     const isMobileViewport = window.matchMedia && window.matchMedia("(max-width: 810px)").matches;
     const mobileIntroWidth = "calc(100vw - 65px)";
 
@@ -3946,7 +4048,16 @@
     }
     root.querySelectorAll('[data-framer-component-type="RichTextContainer"]').forEach((el) => textBlocks.push(el));
     textBlocks.forEach((block) => {
-      const text = norm(block.textContent || "").toLowerCase();
+      const rawText = block.textContent || "";
+      const text = norm(rawText).toLowerCase();
+      const detectionText = rawText
+        .replace(/<[^>]*>/g, " ")
+        .replace(/eyc-reg/gi, " ")
+        .replace(/class\s*=\s*["'][^"']*["']/gi, " ")
+        .replace(/[\s\u00A0\u202F]+/g, " ")
+        .replace(/®/g, "")
+        .trim()
+        .toLowerCase();
       if (!text) return;
 
       const isTopKicker = text.includes("alles begint in de kern") && text.includes("jouw kern");
@@ -3957,8 +4068,14 @@
       }
 
       const hasMainCopy = (
-        /empower\s*your\s*core(?:\s*®)?\s*is\s*geen\s*trend/.test(text)
-        && /(15\s*jaar)/.test(text)
+        (
+          /empower\s*your\s*core\s*is\s*geen\s*trend/.test(detectionText)
+          || /empower\s*your\s*core\s*is\s*not\s*a\s*trend/.test(detectionText)
+        )
+        && (
+          /(15\s*jaar)/.test(detectionText)
+          || /(15\s*years?)/.test(detectionText)
+        )
       );
       if (!hasMainCopy) return;
 
@@ -3967,7 +4084,10 @@
           <section class="eyc-premium-intro" aria-label="Empower Your Core Intro">
             <section class="eyc-premium-hero" aria-label="Premium Intro Hero">
               <div class="eyc-premium-kicker">Methode \u2022 Evidence-based \u2022 15 jaar</div>
-              <h2 class="eyc-premium-title">Empower Your Core is geen trend.</h2>
+              <h2 class="eyc-premium-title">
+                <span class="eyc-premium-title-brand">Empower Your Core®</span>
+                <span class="eyc-premium-title-tail">is geen trend.</span>
+              </h2>
               <p class="eyc-premium-sub">Het is een methode met blijvende waarde.</p>
               <div class="eyc-premium-divider" aria-hidden="true"></div>
               <p class="eyc-premium-copy">
@@ -3984,7 +4104,10 @@
             </section>
             <section class="eyc-premium-panel" aria-label="Priv\u00e9 studio">
               <h3>Stap binnen in onze priv\u00e9 Pilatesstudio in Utrecht</h3>
-              <p>Volledig uitgerust en afgestemd op jou \u2014 waar transformatie begint met bewuste beweging.</p>
+              <p class="eyc-premium-panel-copy">
+                <span class="eyc-premium-panel-copy-line">Volledig uitgerust en afgestemd op jou</span>
+                <span class="eyc-premium-panel-copy-line">waar transformatie begint met bewuste beweging.</span>
+              </p>
               <div class="eyc-premium-tagline"><em>Exclusief.</em>&nbsp;Persoonlijk. Rustig. Doelgericht.</div>
               <a class="eyc-premium-cta" href="/contact.html">Plan een intake</a>
               <div><small class="eyc-premium-cta-sub">Priv\u00e9sessies \u2022 Full Equipment \u2022 Utrecht</small></div>
@@ -3995,10 +4118,11 @@
         block.setAttribute("data-eyc-premium-intro-version", premiumIntroVersion);
       }
 
-      block.classList.add("eyc-home-intro-card");
+      block.classList.add("eyc-home-intro-card", "eyc-unclipped-block");
       // Force the block and its immediate Framer wrapper to expand,
       // but do NOT walk all ancestors (that breaks the Framer section stack)
       block.style.setProperty("height", "auto", "important");
+      block.style.setProperty("min-height", "0", "important");
       block.style.setProperty("max-height", "none", "important");
       block.style.setProperty("overflow", "visible", "important");
       block.style.setProperty("width", "100%", "important");
@@ -4018,6 +4142,7 @@
       const wrapper = block.parentElement;
       if (wrapper) {
         wrapper.style.setProperty("height", "auto", "important");
+        wrapper.style.setProperty("min-height", "0", "important");
         wrapper.style.setProperty("max-height", "none", "important");
         wrapper.style.setProperty("overflow", "visible", "important");
         wrapper.style.setProperty("width", "100%", "important");
@@ -4034,7 +4159,30 @@
         }
       }
       const shell = block.closest('[data-framer-name="Section"]') || block.parentElement;
-      if (shell && shell.classList) shell.classList.add("eyc-home-intro-shell");
+      if (shell && shell.classList) {
+        shell.classList.add("eyc-home-intro-shell", "eyc-unclipped-block");
+        if (shell.style) {
+          shell.style.setProperty("height", "auto", "important");
+          shell.style.setProperty("min-height", "0", "important");
+          shell.style.setProperty("max-height", "none", "important");
+          shell.style.setProperty("overflow", "visible", "important");
+          shell.style.setProperty("padding-top", "0", "important");
+          shell.style.setProperty("padding-bottom", "0", "important");
+          shell.style.setProperty("flex", "0 0 auto", "important");
+        }
+      }
+
+      const flowContainer = shell && shell.parentElement;
+      if (flowContainer && flowContainer.style) {
+        flowContainer.classList.add("eyc-unclipped-block");
+        flowContainer.style.setProperty("height", "auto", "important");
+        flowContainer.style.setProperty("min-height", "0", "important");
+        flowContainer.style.setProperty("max-height", "none", "important");
+        flowContainer.style.setProperty("overflow", "visible", "important");
+        flowContainer.style.setProperty("gap", "0", "important");
+        flowContainer.style.setProperty("padding-top", isMobileViewport ? "0" : "clamp(24px, 3vw, 40px)", "important");
+        flowContainer.style.setProperty("padding-bottom", isMobileViewport ? "0" : "clamp(18px, 2.6vw, 32px)", "important");
+      }
 
       const premiumIntro = block.querySelector(".eyc-premium-intro");
       if (premiumIntro && isMobileViewport && premiumIntro.style) {
@@ -4086,6 +4234,14 @@
       if (childMatch) return;
 
       const targetLine = el.closest("p, span, div") || el;
+      if (eycLang === "en") {
+        if (isTopKicker && norm(targetLine.textContent || "") !== "Everything begins at the center — yours too?") {
+          targetLine.textContent = "Everything begins at the center — yours too?";
+        }
+        if (isBottomKicker && norm(targetLine.textContent || "") !== "Step into your center — the journey starts today.") {
+          targetLine.textContent = "Step into your center — the journey starts today.";
+        }
+      }
       targetLine.classList.add("eyc-home-kicker");
       forceKickerTextStyle(targetLine);
       if (targetLine.querySelectorAll) {
@@ -4290,53 +4446,160 @@
     })();
   }
 
-  // --- EN mode: one-shot sweep to convert Dutch text to English ---
-  // Disconnects observer to prevent loops, walks all text nodes, reconnects.
-  var _enSweepQueued = false;
-  var _enInitialDone = false; // Set after first scheduleTranslate+sweep cycle
-  function queueEnSweep() {
-    console.log("[EYC] queueEnSweep called, lang=" + eycLang + ", queued=" + _enSweepQueued);
-    if (_enSweepQueued || eycLang !== "en") return;
-    _enSweepQueued = true;
-    requestAnimationFrame(function() {
-      try {
-        _enSweepQueued = false;
-        sweepToEnglish();
-      } catch(e) {
-        console.error("[EYC] sweepToEnglish error:", e);
-        _enSweepQueued = false;
-      }
+  var observer = null;
+  var OBSERVED_ATTRIBUTE_FILTER = ['href', 'src', 'title', 'alt', 'placeholder', 'aria-label', 'value'];
+
+  function reconnectObserver() {
+    if (!observer) return;
+    observer.observe(document.documentElement, {
+      subtree: true,
+      childList: true,
+      characterData: true,
+      attributes: true,
+      attributeFilter: OBSERVED_ATTRIBUTE_FILTER
     });
   }
 
-  function sweepToEnglish() {
-    console.log("[EYC] sweepToEnglish called, nlToEnMap size=" + nlToEnMap.size);
-    // Temporarily disconnect observer to prevent loops
-    if (typeof observer !== 'undefined') observer.disconnect();
+  function withObserverPaused(fn) {
+    var shouldReconnect = !!observer;
+    if (observer) observer.disconnect();
+    try {
+      fn();
+    } finally {
+      if (shouldReconnect) reconnectObserver();
+    }
+  }
 
-    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  function normalizeObservedRoot(node) {
+    if (!node) return null;
+    if (node === document || node === document.documentElement || node === document.head) return document.body;
+    if (node.nodeType === Node.DOCUMENT_NODE) return node.body || null;
+    if (node.nodeType === Node.TEXT_NODE) return node.parentElement;
+    if (node.nodeType !== Node.ELEMENT_NODE) return null;
+    return node;
+  }
+
+  function queueBoundedRoot(rootSet, node) {
+    var root = normalizeObservedRoot(node);
+    if (!root) return;
+    rootSet.add(root);
+    if (rootSet.size > 24) {
+      rootSet.clear();
+      if (document.body) rootSet.add(document.body);
+    }
+  }
+
+  function collapseObservedRoots(roots) {
+    var filtered = roots.filter(Boolean);
+    if (!filtered.length) return filtered;
+    if (filtered.indexOf(document.body) !== -1) return [document.body];
+
+    return filtered.filter(function(root, index) {
+      return !filtered.some(function(other, otherIndex) {
+        return otherIndex !== index && other && other.contains && other.contains(root);
+      });
+    });
+  }
+
+  function runScopedFixes(root) {
+    var target = normalizeObservedRoot(root);
+    if (!target || !target.querySelectorAll) return;
+
+    fixVideos(target);
+    fixYouTubeMute(target);
+    fixLinks(target);
+    forceDutchNavLabels(target);
+    forceDutchCriticalCopy(target);
+    fixSocialLinks(target);
+    hideStaticMirrorLabel();
+    enforceRegisteredBranding();
+    fixMobileNavLinks();
+    injectLangToggle();
+
+    if (isAboutUsPath()) {
+      enforceAboutUsDutchCopy(target);
+    }
+
+    if (isCaseStudyPath()) {
+      translateWorksHeroTitle();
+      forceDutchCaseStudyCopy(target);
+      ensureCaseStudyHeroTitleStyles();
+      ensureCaseStudyVideoVisible();
+      fixChrisCaseStudyIntro();
+    }
+
+    if (isTeacherTrainingPath()) {
+      forceTeacherTrainingNotice(target);
+    }
+
+    if (isPersonalTrainingPath()) {
+      forcePersonalTrainingHero(target);
+    }
+
+    if (isContactPath()) {
+      fixContactDetails(target);
+      removeContactQuoteButton(target);
+      interceptContactForm();
+    }
+
+    if (isPricingPath()) {
+      fixPricingCurrency(target);
+      fixPricingCardTitles();
+    }
+
+    if (!isHomePath()) return;
+
+    replaceProcessSection(target);
+    fixHomeKickerPunctuation(target);
+    syncHomeTeacherTrainingCard(target);
+    alignHomeStoryIntro(target);
+    removeItalicFromHeadings(target);
+    fixTestimonialsIntroHeading(target);
+    alignTestimonialsCarousel(target);
+    fixJourneySectionLayout(target);
+    applyHomeDocxIntro(target);
+    insertHomeBenefitVideo(target);
+    swapHomepageImages();
+    insertStudioClips();
+    fixHeroBackground();
+    ensureHomeWhiteTextStyle();
+  }
+
+  // --- EN mode: scoped sweep to convert Dutch text to English ---
+  var _enSweepQueued = false;
+  var _enPendingRoots = new Set();
+  var _enInitialDone = false;
+
+  function sweepToEnglishRoot(root) {
+    var target = normalizeObservedRoot(root) || document.body;
+    if (!target) return;
+
+    var walker = document.createTreeWalker(target, NodeFilter.SHOW_TEXT);
     var node;
-    while (node = walker.nextNode()) {
+    while ((node = walker.nextNode())) {
       var raw = node.nodeValue;
       if (!raw) continue;
-      var txt = norm(raw).trim();
+      var leadingWs = (raw.match(/^\s*/) || [""])[0];
+      var trailingWs = (raw.match(/\s*$/) || [""])[0];
+      var core = raw.slice(leadingWs.length, raw.length - trailingWs.length);
+      var txt = norm(core).trim();
       if (!txt || txt.length < 2) continue;
 
-      // Check nlToEnMap for Dutch→English
       var en = nlToEnMap.get(txt) || nlToEnMap.get(txt.toLowerCase());
-      if (en && en !== txt) {
-        node.nodeValue = en;
-      } else if (txt.length > 50 && txt.indexOf("Bij Empower") > -1) {
-        console.log("[EYC-SWEEP-DEBUG] no match for:", txt.substring(0, 80), "len=" + txt.length);
-        // Try to find closest match in map
-        nlToEnMap.forEach(function(v, k) {
-          if (k.indexOf("Bij Empower") > -1) console.log("[EYC-SWEEP-DEBUG] map key:", k.substring(0, 80), "len=" + k.length);
-        });
+      var nextCore = en || core;
+      var nextText = leadingWs + nextCore + trailingWs;
+      if (nextText !== raw) {
+        node.nodeValue = nextText;
       }
     }
 
-    // Also sweep attributes
-    var els = document.body.querySelectorAll('[placeholder],[aria-label],[title],[alt]');
+    var attrSelector = '[placeholder],[aria-label],[title],[alt]';
+    var els = [];
+    if (target.matches && target.matches(attrSelector)) els.push(target);
+    target.querySelectorAll(attrSelector).forEach(function(el) {
+      els.push(el);
+    });
+
     els.forEach(function(el) {
       ['placeholder', 'aria-label', 'title', 'alt'].forEach(function(attr) {
         var val = el.getAttribute(attr);
@@ -4346,18 +4609,28 @@
         if (en && en !== trimmed) el.setAttribute(attr, en);
       });
     });
+  }
 
-    // Reconnect observer
-    if (typeof observer !== 'undefined') {
-      observer.observe(document.documentElement, {
-        subtree: true,
-        childList: true,
-        characterData: true,
-        attributes: true,
-        attributeFilter: ['href', 'src', 'title', 'alt', 'placeholder', 'aria-label', 'value']
+  function queueEnSweep(root) {
+    if (eycLang !== "en") return;
+    queueBoundedRoot(_enPendingRoots, root || document.body);
+    if (_enSweepQueued) return;
+
+    _enSweepQueued = true;
+    requestAnimationFrame(function() {
+      var roots = collapseObservedRoots(Array.from(_enPendingRoots));
+      _enPendingRoots.clear();
+      _enSweepQueued = false;
+      if (!roots.length) return;
+
+      withObserverPaused(function() {
+        roots.forEach(function(target) {
+          sweepToEnglishRoot(target);
+        });
       });
-    }
-    _enInitialDone = true;
+
+      _enInitialDone = true;
+    });
   }
 
   let scheduled = false;
@@ -4366,46 +4639,11 @@
     scheduled = true;
     requestAnimationFrame(() => {
       scheduled = false;
-      translateTree(document.body);
-      fixVideos(document.body);
-      fixYouTubeMute(document.body);
-      fixLinks(document.body);
-      forceDutchNavLabels(document.body);
-      forceDutchCriticalCopy(document.body);
-      enforceAboutUsDutchCopy(document.body);
-      translateWorksHeroTitle();
-      hideStaticMirrorLabel();
-      forceDutchCaseStudyCopy(document.body);
-      ensureCaseStudyHeroTitleStyles();
-      ensureCaseStudyVideoVisible();
-      fixChrisCaseStudyIntro();
-      forceTeacherTrainingNotice(document.body);
-      forcePersonalTrainingHero(document.body);
-      fixSocialLinks(document.body);
-      replaceProcessSection(document.body);
-      fixHomeKickerPunctuation(document.body);
-      syncHomeTeacherTrainingCard(document.body);
-      alignHomeStoryIntro(document.body);
-      removeItalicFromHeadings(document.body);
-      fixTestimonialsIntroHeading(document.body);
-      alignTestimonialsCarousel(document.body);
-      fixJourneySectionLayout(document.body);
-      fixContactDetails(document.body);
-      removeContactQuoteButton(document.body);
-      applyHomeDocxIntro(document.body);
-      insertHomeBenefitVideo(document.body);
-      swapHomepageImages();
-      insertStudioClips();
-      fixHeroBackground();
-      ensureHomeWhiteTextStyle();
-      fixPricingCurrency(document.body);
-      fixPricingCardTitles();
-      enforceRegisteredBranding();
-      interceptContactForm();
-      fixMobileNavLinks();
-      injectLangToggle();
-      // EN mode: queue a single sweep to convert Dutch text injected by fix functions
-      queueEnSweep();
+      withObserverPaused(function() {
+        translateTree(document.body);
+        runScopedFixes(document.body);
+      });
+      queueEnSweep(document.body);
     });
   }
 
@@ -4506,142 +4744,60 @@
     scheduleTranslate();
   }
 
-  const observer = new MutationObserver((mutations) => {
-    for (const m of mutations) {
-      if (m.type === 'characterData') {
-        translateTextNode(m.target);
-        if (m.target && m.target.parentElement) {
-          fixContactDetails(m.target.parentElement);
-          removeContactQuoteButton(m.target.parentElement);
-          applyHomeDocxIntro(m.target.parentElement);
-          insertHomeBenefitVideo(m.target.parentElement);
-          fixHomeKickerPunctuation(m.target.parentElement);
-          syncHomeTeacherTrainingCard(m.target.parentElement);
-          alignHomeStoryIntro(m.target.parentElement);
-          removeItalicFromHeadings(m.target.parentElement);
-          fixPricingCurrency(m.target.parentElement);
-          forceDutchCaseStudyCopy(m.target.parentElement);
-          forcePersonalTrainingHero(m.target.parentElement);
-          fixTestimonialsIntroHeading(m.target.parentElement);
-          alignTestimonialsCarousel(m.target.parentElement);
-          enforceRegisteredBranding();
-          ensureHomeWhiteTextStyle();
-          swapHomepageImages();
-          insertStudioClips();
-          document.querySelectorAll("video[data-eyc-src]").forEach(function(v) {
-            var correct = v.getAttribute("data-eyc-src");
-            if (v.src !== correct && !v.src.endsWith(correct)) { v.src = correct; }
-          });
-          fixHeroBackground();
-          queueEnSweep();
+  var pendingMutationRoots = new Set();
+  var pendingAttrTargets = new Set();
+  var mutationFlushQueued = false;
+
+  function flushMutationQueue() {
+    mutationFlushQueued = false;
+    var roots = collapseObservedRoots(Array.from(pendingMutationRoots));
+    var attrTargets = Array.from(pendingAttrTargets);
+    pendingMutationRoots.clear();
+    pendingAttrTargets.clear();
+    if (!roots.length && !attrTargets.length) return;
+
+    withObserverPaused(function() {
+      attrTargets.forEach(function(target) {
+        if (target && target.nodeType === Node.ELEMENT_NODE) {
+          translateAttrs(target);
         }
-      } else if (m.type === 'childList') {
-        m.addedNodes.forEach((n) => {
-          if (n.nodeType === Node.TEXT_NODE) {
-            translateTextNode(n);
-            if (n.parentElement) {
-              fixContactDetails(n.parentElement);
-              removeContactQuoteButton(n.parentElement);
-              applyHomeDocxIntro(n.parentElement);
-              insertHomeBenefitVideo(n.parentElement);
-              fixHomeKickerPunctuation(n.parentElement);
-              syncHomeTeacherTrainingCard(n.parentElement);
-              alignHomeStoryIntro(n.parentElement);
-              fixPricingCurrency(n.parentElement);
-              enforceAboutUsDutchCopy(n.parentElement);
-              translateWorksHeroTitle();
-              hideStaticMirrorLabel();
-              forceDutchCaseStudyCopy(n.parentElement);
-              fixChrisCaseStudyIntro();
-              forceTeacherTrainingNotice(n.parentElement);
-              forcePersonalTrainingHero(n.parentElement);
-              fixTestimonialsIntroHeading(n.parentElement);
-              alignTestimonialsCarousel(n.parentElement);
-              enforceRegisteredBranding();
-              ensureHomeWhiteTextStyle();
-              ensureCaseStudyHeroTitleStyles();
-              ensureCaseStudyVideoVisible();
-              interceptContactForm();
-              queueEnSweep();
-            }
-          } else if (n.nodeType === Node.ELEMENT_NODE) {
-            translateTree(n);
-            fixVideos(n);
-            fixYouTubeMute(n);
-            fixLinks(n);
-            forceDutchNavLabels(n);
-            forceDutchCriticalCopy(n);
-            enforceAboutUsDutchCopy(n);
-            translateWorksHeroTitle();
-            hideStaticMirrorLabel();
-            forceDutchCaseStudyCopy(n);
-            ensureCaseStudyHeroTitleStyles();
-      ensureCaseStudyVideoVisible();
-            fixChrisCaseStudyIntro();
-            forceTeacherTrainingNotice(n);
-            forcePersonalTrainingHero(n);
-            fixSocialLinks(n);
-            replaceProcessSection(n);
-            fixTestimonialsIntroHeading(n);
-            alignTestimonialsCarousel(n);
-            fixJourneySectionLayout(n);
-            fixContactDetails(n);
-            removeContactQuoteButton(n);
-            applyHomeDocxIntro(n);
-            insertHomeBenefitVideo(n);
-            fixHomeKickerPunctuation(n);
-            syncHomeTeacherTrainingCard(n);
-            alignHomeStoryIntro(n);
-            ensureHomeWhiteTextStyle();
-            fixPricingCurrency(n);
-            fixPricingCardTitles();
-            enforceRegisteredBranding();
-            injectLangToggle();
-            queueEnSweep();
-          }
+      });
+
+      roots.forEach(function(root) {
+        translateTree(root);
+        runScopedFixes(root);
+      });
+    });
+
+    roots.forEach(function(root) {
+      queueEnSweep(root);
+    });
+  }
+
+  function queueMutationFlush() {
+    if (mutationFlushQueued) return;
+    mutationFlushQueued = true;
+    requestAnimationFrame(flushMutationQueue);
+  }
+
+  observer = new MutationObserver((mutations) => {
+    mutations.forEach(function(mutation) {
+      if (mutation.type === 'characterData') {
+        queueBoundedRoot(pendingMutationRoots, mutation.target);
+      } else if (mutation.type === 'childList') {
+        mutation.addedNodes.forEach(function(node) {
+          queueBoundedRoot(pendingMutationRoots, node);
         });
-      } else if (m.type === 'attributes') {
-        if (m.target && m.target.nodeType === Node.ELEMENT_NODE) {
-          translateAttrs(m.target);
-          fixVideos(m.target);
-          fixYouTubeMute(m.target);
-          fixLinks(m.target);
-          forceDutchNavLabels(m.target);
-          forceDutchCriticalCopy(m.target);
-          enforceAboutUsDutchCopy(m.target);
-          translateWorksHeroTitle();
-          hideStaticMirrorLabel();
-          forceDutchCaseStudyCopy(m.target);
-          ensureCaseStudyHeroTitleStyles();
-      ensureCaseStudyVideoVisible();
-          forceTeacherTrainingNotice(m.target);
-          forcePersonalTrainingHero(m.target);
-          fixSocialLinks(m.target);
-          replaceProcessSection(m.target);
-          fixTestimonialsIntroHeading(m.target);
-          alignTestimonialsCarousel(m.target);
-          fixJourneySectionLayout(m.target);
-          fixContactDetails(m.target);
-          removeContactQuoteButton(m.target);
-          applyHomeDocxIntro(m.target);
-          insertHomeBenefitVideo(m.target);
-          fixHomeKickerPunctuation(m.target);
-          syncHomeTeacherTrainingCard(m.target);
-          alignHomeStoryIntro(m.target);
-          ensureHomeWhiteTextStyle();
-          fixPricingCurrency(m.target);
-          enforceRegisteredBranding();
-          queueEnSweep();
+      } else if (mutation.type === 'attributes') {
+        if (mutation.target && mutation.target.nodeType === Node.ELEMENT_NODE) {
+          queueBoundedRoot(pendingMutationRoots, mutation.target);
+          pendingAttrTargets.add(mutation.target);
         }
       }
-      }
+    });
+
+    queueMutationFlush();
   });
 
-  observer.observe(document.documentElement, {
-    subtree: true,
-    childList: true,
-    characterData: true,
-    attributes: true,
-    attributeFilter: ['href', 'src', 'title', 'alt', 'placeholder', 'aria-label', 'value']
-  });
+  reconnectObserver();
 })();

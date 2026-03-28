@@ -5,7 +5,22 @@ This project follows [Semantic Versioning](https://semver.org/).
 
 ---
 
-## [1.0.0] - 2025-03-27
+## [Unreleased]
+
+### Changed
+- Hardened the English homepage so the premium intro, benefit video, process section, and studio clips now live in `public/index.html`
+- Reduced homepage runtime generation by turning `translate.js` into a support layer for those baked sections
+
+### Documentation
+- Refreshed the repository handover documentation for client delivery
+- Clarified the current Vercel deployment mode and local preview workflow
+- Updated cache management guidance for `translate.js` versioning
+- Aligned the security documentation with the headers and audit commands currently used in the project
+- Documented the new HTML-first maintenance workflow for the English homepage
+
+---
+
+## [1.0.0] - 2026-03-27
 
 ### Added
 - Production-ready website built on Next.js 15 + React 19
@@ -37,7 +52,7 @@ This project follows [Semantic Versioning](https://semver.org/).
 
 ---
 
-## [0.8.0] - 2025-02-28
+## [0.8.0] - 2026-02-28
 
 ### Added
 - Project scaffolding with Next.js 15
