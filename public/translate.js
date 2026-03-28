@@ -9,8 +9,17 @@
     if (path.indexOf("/personal-training") === -1 && path.indexOf("/teacher-training") === -1) return;
 
     var LOCAL_PT_SRC = "/assets/personal-training-program.jpg";
-    var LOCAL_TT_SRC = "/assets/teacher-training-program.mp4";
+    var LOCAL_TT_POSTER = "/assets/teacher-training-hero.jpg";
     var isPT = path.indexOf("/personal-training") !== -1;
+    var isTT = path.indexOf("/teacher-training") !== -1;
+
+    function stripTeacherTrainingFallbackImage(img) {
+      if (!isTT || !img || !img.closest || !img.closest(".framer-5j3lq1")) return false;
+      var src = (img.currentSrc || img.src || "").toLowerCase();
+      if (src.indexOf("framerusercontent") === -1 && src.indexOf(LOCAL_TT_POSTER) === -1) return false;
+      img.remove();
+      return true;
+    }
 
     var observer = new MutationObserver(function(mutations) {
       for (var i = 0; i < mutations.length; i++) {
@@ -19,7 +28,9 @@
           if (isPT && m.target.src.indexOf("framerusercontent") !== -1 && m.target.closest(".framer-5j3lq1")) {
             m.target.src = LOCAL_PT_SRC;
             m.target.removeAttribute("srcset");
+            continue;
           }
+          stripTeacherTrainingFallbackImage(m.target);
         }
         if (m.type === "childList") {
           var imgs = [];
@@ -37,7 +48,9 @@
             if (isPT && imgs[n].src.indexOf("framerusercontent") !== -1 && imgs[n].closest(".framer-5j3lq1")) {
               imgs[n].src = LOCAL_PT_SRC;
               imgs[n].removeAttribute("srcset");
+              continue;
             }
+            stripTeacherTrainingFallbackImage(imgs[n]);
           }
         }
       }
@@ -144,8 +157,9 @@
   nlToEnMap.set(norm("EUR 87,50"), "EUR 87,50");
   nlToEnMap.set(norm("EUR 800"), "EUR 800");
   nlToEnMap.set(norm("+31 6 13 62 99 65"), "+31 6 13 62 99 65");
-  nlToEnMap.set(norm("Stap in je kern — de reis begint vandaag."), "Step into your center — the journey starts today");
   nlToEnMap.set(norm("Alles begint in de kern — ook jouw kern?"), "Everything begins at the center — yours too?");
+  nlToEnMap.set(norm("alles begint in de kern — ook jouw kern?"), "Everything begins at the center — yours too?");
+  nlToEnMap.set(norm("Stap in je kern — de reis begint vandaag."), "Step into your center — the journey starts today");
 
   // Process section text (hardcoded in replaceProcessSection, not in original map)
   nlToEnMap.set(norm("ONTDEKKEN"), "DISCOVER");
@@ -485,8 +499,6 @@
   nlToEnMap.set(norm("Het aanbod is pas het startpunt."), "What we offer is just the starting point.");
   nlToEnMap.set(norm("het aanbod is pas het startpunt."), "What we offer is just the starting point.");
   nlToEnMap.set(norm("Stap in je kern — de reis begint vandaag"), "Step into your center — the journey starts today");
-  nlToEnMap.set(norm("Alles begint in de kern — ook jouw kern?"), "Everything begins at the center — yours too?");
-  nlToEnMap.set(norm("alles begint in de kern — ook jouw kern?"), "Everything begins at the center — yours too?");
 
   // ── Footer ──
   nlToEnMap.set(norm("© 2025 Empower Your Core Alle rechten voorbehouden."), "© 2025 Empower Your Core® All rights reserved.");
@@ -1205,9 +1217,8 @@
     });
   }
 
-  const TEACHER_TRAINING_PAGE_VERSION = "2026-03-14-v4";
+  const TEACHER_TRAINING_PAGE_VERSION = "2026-03-28-v1";
   const TEACHER_TRAINING_VIDEO_SRC = "/assets/teacher-training-program.mp4";
-  const TEACHER_TRAINING_VIDEO_POSTER = "https://framerusercontent.com/images/vHRkazprqjlKNPYIGqCjNq0SBnE.jpg?width=6459&height=4306";
   const TEACHER_TRAINING_NOTICE_TEXT = "www.eycessencecircle.com more information soon.";
   const PERSONAL_TRAINING_PAGE_VERSION = "2026-03-14-v1";
   const PERSONAL_TRAINING_IMAGE_SRC = "/assets/personal-training-program.jpg";
@@ -1226,7 +1237,6 @@
       data-eyc-video-lock="true"
       data-eyc-unmute="true"
       src="${TEACHER_TRAINING_VIDEO_SRC}"
-      poster="${TEACHER_TRAINING_VIDEO_POSTER}"
       autoplay
       muted
       loop
@@ -1277,10 +1287,12 @@
 
     content.innerHTML = `${TEACHER_TRAINING_MEDIA_HTML}${TEACHER_TRAINING_BODY_HTML}`;
     content.dataset.eycTeacherTrainingVersion = TEACHER_TRAINING_PAGE_VERSION;
+    content.querySelectorAll('img, [data-framer-background-image-wrapper]').forEach((node) => node.remove());
 
     // Unmute the video on first user interaction (browsers block autoplay with sound)
     var video = content.querySelector("video[data-eyc-unmute]");
     if (video && !video.dataset.eycUnmuteListenerAdded) {
+      video.removeAttribute("poster");
       video.dataset.eycUnmuteListenerAdded = "true";
       function unmuteOnInteraction() {
         video.muted = false;
@@ -4028,6 +4040,7 @@
     const premiumIntroVersion = "2026-03-28-v4";
     const isMobileViewport = window.matchMedia && window.matchMedia("(max-width: 810px)").matches;
     const mobileIntroWidth = "calc(100vw - 65px)";
+    const candidateSelector = "p, span, div, .framer-text, [data-text-fill='true']";
 
     function forceKickerTextStyle(el) {
       if (!el || !el.style) return;
@@ -4039,6 +4052,61 @@
       el.style.setProperty("opacity", "1", "important");
       el.style.setProperty("-webkit-text-stroke", "0", "important");
       el.style.setProperty("filter", "none", "important");
+    }
+
+    function isTopKickerText(text) {
+      return (
+        (text.includes("alles begint in de kern") && text.includes("jouw kern"))
+        || (text.includes("everything begins at the center") && text.includes("yours too"))
+      );
+    }
+
+    function isBottomKickerText(text) {
+      return (
+        (text.includes("stap in je kern") && text.includes("reis begint vandaag"))
+        || (text.includes("step into your center") && text.includes("journey starts today"))
+      );
+    }
+
+    function ensureTopHeroKicker() {
+      const desiredText = eycLang === "en"
+        ? "Everything begins at the center — yours too?"
+        : "Alles begint in de kern — ook jouw kern?";
+      const existingLines = [];
+      document.querySelectorAll(`#scrollsection ${candidateSelector}`).forEach((el) => {
+        const text = norm(el.textContent || "").toLowerCase();
+        if (!text || !isTopKickerText(text)) return;
+        const childMatch = el.querySelectorAll
+          ? Array.from(el.querySelectorAll(candidateSelector)).some((child) => {
+            if (child === el) return false;
+            return isTopKickerText(norm(child.textContent || "").toLowerCase());
+          })
+          : false;
+        if (childMatch) return;
+        existingLines.push(el.closest("p, span, div") || el);
+      });
+
+      let kicker = existingLines[0] || document.querySelector('#scrollsection [data-eyc-home-top-kicker="true"]');
+      existingLines.slice(1).forEach((dup) => {
+        const dupBlock = dup.closest && dup.closest('[data-framer-component-type="RichTextContainer"]');
+        if (dupBlock && dupBlock !== kicker) dupBlock.remove();
+        else if (dup !== kicker) dup.remove();
+      });
+
+      if (!kicker) {
+        const host = document.querySelector("#scrollsection .framer-1z0afrl .framer-1irgnhr .ssr-variant")
+          || document.querySelector("#scrollsection .framer-1z0afrl .framer-1irgnhr")
+          || document.querySelector("#scrollsection .framer-1g0yubl");
+        if (!host) return;
+        kicker = document.createElement("div");
+        kicker.dataset.eycHomeTopKicker = "true";
+        kicker.className = "eyc-home-kicker";
+        if (host.firstChild) host.insertBefore(kicker, host.firstChild);
+        else host.appendChild(kicker);
+      }
+      kicker.textContent = desiredText;
+      kicker.classList.add("eyc-home-kicker");
+      forceKickerTextStyle(kicker);
     }
 
     const kickerBlocks = new Set();
@@ -4060,8 +4128,8 @@
         .toLowerCase();
       if (!text) return;
 
-      const isTopKicker = text.includes("alles begint in de kern") && text.includes("jouw kern");
-      const isBottomKicker = text.includes("stap in je kern") && text.includes("reis begint vandaag");
+      const isTopKicker = isTopKickerText(text);
+      const isBottomKicker = isBottomKickerText(text);
       if (isTopKicker || isBottomKicker) {
         block.classList.remove("eyc-home-kicker");
         kickerBlocks.add(block);
@@ -4207,8 +4275,9 @@
       });
     });
 
+    ensureTopHeroKicker();
+
     const inlineCandidates = [];
-    const candidateSelector = "p, span, div, .framer-text, [data-text-fill='true']";
     if (root.matches && root.matches(candidateSelector)) inlineCandidates.push(root);
     root.querySelectorAll(candidateSelector).forEach((el) => inlineCandidates.push(el));
 
@@ -4216,8 +4285,8 @@
     inlineCandidates.forEach((el) => {
       const text = norm(el.textContent || "").toLowerCase();
       if (!text) return;
-      const isTopKicker = text.includes("alles begint in de kern") && text.includes("jouw kern");
-      const isBottomKicker = text.includes("stap in je kern") && text.includes("reis begint vandaag");
+      const isTopKicker = isTopKickerText(text);
+      const isBottomKicker = isBottomKickerText(text);
       if (!isTopKicker && !isBottomKicker) return;
 
       const childMatch = el.querySelectorAll
@@ -4225,10 +4294,7 @@
           if (child === el) return false;
           const childText = norm(child.textContent || "").toLowerCase();
           if (!childText) return false;
-          return (
-            (childText.includes("alles begint in de kern") && childText.includes("jouw kern"))
-            || (childText.includes("stap in je kern") && childText.includes("reis begint vandaag"))
-          );
+          return isTopKickerText(childText) || isBottomKickerText(childText);
         })
         : false;
       if (childMatch) return;
@@ -4241,6 +4307,8 @@
         if (isBottomKicker && norm(targetLine.textContent || "") !== "Step into your center — the journey starts today.") {
           targetLine.textContent = "Step into your center — the journey starts today.";
         }
+      } else if (isTopKicker && norm(targetLine.textContent || "") !== "Alles begint in de kern — ook jouw kern?") {
+        targetLine.textContent = "Alles begint in de kern — ook jouw kern?";
       }
       targetLine.classList.add("eyc-home-kicker");
       forceKickerTextStyle(targetLine);
