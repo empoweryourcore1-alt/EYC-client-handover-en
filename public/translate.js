@@ -2213,6 +2213,14 @@
           text-align: left !important;
         }
 
+        .eyc-home-story-intro p:first-child,
+        .eyc-home-story-intro p:first-child .framer-text,
+        .eyc-home-story-intro p:first-child span.framer-text,
+        .eyc-home-story-intro p:first-child strong.framer-text,
+        .eyc-testimonial-intro-fix p:first-child,
+        .eyc-testimonial-intro-fix p:first-child .framer-text,
+        .eyc-testimonial-intro-fix p:first-child span.framer-text,
+        .eyc-testimonial-intro-fix p:first-child strong.framer-text,
         .eyc-journey-copy-italic,
         .eyc-journey-copy-italic p,
         .eyc-journey-copy-italic .framer-text {
@@ -2224,6 +2232,24 @@
           opacity: 1 !important;
           transform: none !important;
           will-change: auto !important;
+        }
+
+        .eyc-offer-intro-fix p:last-child,
+        .eyc-offer-intro-fix p:last-child .framer-text,
+        .eyc-offer-intro-fix p:last-child span.framer-text,
+        .eyc-offer-intro-fix p:last-child strong.framer-text,
+        .eyc-home-story-intro p:last-child,
+        .eyc-home-story-intro p:last-child .framer-text,
+        .eyc-home-story-intro p:last-child span.framer-text,
+        .eyc-home-story-intro p:last-child strong.framer-text,
+        .eyc-testimonial-intro-fix p:last-child,
+        .eyc-testimonial-intro-fix p:last-child .framer-text,
+        .eyc-testimonial-intro-fix p:last-child span.framer-text,
+        .eyc-testimonial-intro-fix p:last-child strong.framer-text {
+          --framer-font-style: normal !important;
+          font-family: "Inter Display", "Inter Display Placeholder", sans-serif !important;
+          font-style: normal !important;
+          letter-spacing: -0.04em !important;
         }
 
         .eyc-testimonial-intro-fix,
@@ -2323,6 +2349,14 @@
           overflow-wrap: anywhere;
         }
 
+        .eyc-home-story-intro p:first-child,
+        .eyc-home-story-intro p:first-child .framer-text,
+        .eyc-home-story-intro p:first-child span.framer-text,
+        .eyc-home-story-intro p:first-child strong.framer-text,
+        .eyc-testimonial-intro-fix p:first-child,
+        .eyc-testimonial-intro-fix p:first-child .framer-text,
+        .eyc-testimonial-intro-fix p:first-child span.framer-text,
+        .eyc-testimonial-intro-fix p:first-child strong.framer-text,
         .eyc-journey-copy-italic,
         .eyc-journey-copy-italic p,
         .eyc-journey-copy-italic .framer-text {
@@ -2334,6 +2368,24 @@
           opacity: 1 !important;
           transform: none !important;
           will-change: auto !important;
+        }
+
+        .eyc-offer-intro-fix p:last-child,
+        .eyc-offer-intro-fix p:last-child .framer-text,
+        .eyc-offer-intro-fix p:last-child span.framer-text,
+        .eyc-offer-intro-fix p:last-child strong.framer-text,
+        .eyc-home-story-intro p:last-child,
+        .eyc-home-story-intro p:last-child .framer-text,
+        .eyc-home-story-intro p:last-child span.framer-text,
+        .eyc-home-story-intro p:last-child strong.framer-text,
+        .eyc-testimonial-intro-fix p:last-child,
+        .eyc-testimonial-intro-fix p:last-child .framer-text,
+        .eyc-testimonial-intro-fix p:last-child span.framer-text,
+        .eyc-testimonial-intro-fix p:last-child strong.framer-text {
+          --framer-font-style: normal !important;
+          font-family: "Inter Display", "Inter Display Placeholder", sans-serif !important;
+          font-style: normal !important;
+          letter-spacing: -0.04em !important;
         }
 
         .eyc-testimonial-intro-fix,
@@ -2532,20 +2584,26 @@
   /** Remove italic from "Ons aanbod" and "Hoe wij werken" headings */
   function removeItalicFromHeadings(root) {
     if (!root || !root.querySelectorAll) return;
-    var targets = ["Ons aanbod", "Hoe wij werken", "Hoe we werken", "Ervaringen van onze cli\u00ebnten"];
+    var targets = [
+      "Ons aanbod",
+      "What we offer",
+      "Hoe wij werken",
+      "Hoe we werken",
+      "How we work",
+      "Ervaringen van onze cli\u00ebnten",
+      "Hear from our clients"
+    ];
     root.querySelectorAll("strong, span, p").forEach(function(el) {
       var text = el.textContent && el.textContent.trim();
       if (targets.indexOf(text) !== -1) {
-        var isErvaringen = text === "Ervaringen van onze cli\u00ebnten";
-        // Keep "Ervaringen van onze cliënten" italic (cursive) on all viewports
-        if (!isErvaringen) {
-          el.style.setProperty("font-style", "normal", "important");
-        }
-        // Also fix parent elements that may have italic (skip Ervaringen)
+        el.style.setProperty("font-style", "normal", "important");
+        el.style.setProperty("font-family", '"Inter Display", "Inter Display Placeholder", sans-serif', "important");
+        el.style.setProperty("letter-spacing", "-0.04em", "important");
+        // Also fix parent elements that may have italic.
         var parent = el.parentElement;
         while (parent && parent.tagName !== "BODY") {
           var ps = getComputedStyle(parent).fontStyle;
-          if (ps === "italic" && !isErvaringen) {
+          if (ps === "italic") {
             parent.style.setProperty("font-style", "normal", "important");
           }
           if (ps !== "italic") break;
