@@ -2905,8 +2905,8 @@
     });
   }
 
-  const HOME_TEACHER_TRAINING_CARD_VERSION = "2026-03-14-v1";
-  const HOME_TEACHER_TRAINING_CARD_TEASER = "Word een expert in beweging.";
+  const HOME_TEACHER_TRAINING_CARD_VERSION = "2026-04-08-en-v3";
+  const HOME_TEACHER_TRAINING_CARD_TEASER = "Become an expert in movement.";
   const HOME_TEACHER_TRAINING_CARD_TEASER_HTML = `
     <p class="framer-text framer-styles-preset-saf75d" data-styles-preset="xEbsc9wJk" style="--framer-text-color:var(--extracted-r6o4lv, var(--token-9b0083b8-b14b-4f4a-b9c6-4a160184ab2b, rgba(255, 255, 255, 0.6)))">${HOME_TEACHER_TRAINING_CARD_TEASER}</p>
   `;

@@ -10,6 +10,7 @@ This project follows [Semantic Versioning](https://semver.org/).
 ### Changed
 - Hardened the English homepage so the premium intro, benefit video, process section, and studio clips now live in `public/index.html`
 - Reduced homepage runtime generation by turning `translate.js` into a support layer for those baked sections
+- Normalized the homepage `Teacher Training Program` card teaser to English-only copy for the EN handover repo
 
 ### Documentation
 - Refreshed the repository handover documentation for client delivery
@@ -17,6 +18,7 @@ This project follows [Semantic Versioning](https://semver.org/).
 - Updated cache management guidance for `translate.js` versioning
 - Aligned the security documentation with the headers and audit commands currently used in the project
 - Documented the new HTML-first maintenance workflow for the English homepage
+- Added an explicit homepage typography guardrail so `What we offer`, `How we work`, and `Hear from our clients` stay non-cursive while the intro lead lines can remain italic
 
 ---
 

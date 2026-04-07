@@ -2,7 +2,7 @@
 
 > **Project:** Empower Your Core (empoweryourcore.nl)
 > **Architecture:** Next.js 15 + Framer Hybrid | TypeScript | Vercel Edge
-> **Last updated:** 2026-03-28
+> **Last updated:** 2026-04-08
 
 ---
 
@@ -277,6 +277,17 @@ git push origin main  →  Vercel webhook  →  Auto build + deploy  →  Live (
 2. Keep `translate.js` focused on translation coverage, responsive CSS, and targeted fixes
 3. Only add runtime DOM generation if the section cannot be safely maintained in the base HTML
 4. Rebuild with `yarn build` and validate the iframe-rendered page in `yarn start`
+
+### Preserving Premium Home Headings
+
+For `What we offer`, `How we work`, and `Hear from our clients`:
+
+- keep the heading itself non-cursive
+- keep `Inter Display`
+- keep the gold gradient / premium text fill
+- only the lead sentence above the heading may stay italic
+
+Because Framer often outputs these as multi-paragraph rich-text blocks, do not style the entire block as italic. Override the heading paragraph specifically.
 
 ### Modifying Styles
 

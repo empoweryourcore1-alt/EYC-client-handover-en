@@ -75,6 +75,34 @@ In this English handover repository, the homepage has already been partially har
 
 ---
 
+## Homepage Heading Guardrail
+
+The homepage section headings below are intentionally styled as premium editorial headings and should not be switched back to italic:
+
+- `What we offer`
+- `How we work`
+- `Hear from our clients`
+
+Keep these rules:
+
+- heading stays **non-cursive**
+- `Inter Display` stays in place
+- gold gradient / text fill stays in place
+- the lead sentence above the heading may remain italic
+
+Why this matters:
+
+- the elegant look comes from the contrast between an italic lead sentence and a clean upright heading
+- if the heading inherits Framer's italic styling, the section immediately loses its premium editorial feel
+
+Implementation note:
+
+- Framer often renders these as one multi-paragraph rich-text block
+- the heading is usually the **last paragraph** of that intro block
+- if styling regresses, override the heading paragraph specifically in `public/translate.js`
+
+---
+
 ## Project Structure
 
 ```
