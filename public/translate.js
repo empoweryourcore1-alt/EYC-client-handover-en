@@ -851,6 +851,128 @@
     });
   }
 
+  function navigateTopHome() {
+    try {
+      if (window.top && window.top !== window) {
+        window.top.location.href = "/";
+        return;
+      }
+    } catch (e) {}
+    window.location.href = "/";
+  }
+
+  var topHomeInterceptorInstalled = false;
+  function installTopHomeInterceptor() {
+    if (topHomeInterceptorInstalled) return;
+    topHomeInterceptorInstalled = true;
+
+    document.addEventListener("click", function (event) {
+      var target = event.target && event.target.closest
+        ? event.target.closest("[data-eyc-home-bound='1']")
+        : null;
+      if (!target) return;
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      if (typeof event.button === "number" && event.button !== 0) return;
+      event.preventDefault();
+      event.stopPropagation();
+      if (typeof event.stopImmediatePropagation === "function") {
+        event.stopImmediatePropagation();
+      }
+      navigateTopHome();
+    }, true);
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      var target = event.target && event.target.closest
+        ? event.target.closest("[data-eyc-home-bound='1']")
+        : null;
+      if (!target) return;
+      event.preventDefault();
+      event.stopPropagation();
+      if (typeof event.stopImmediatePropagation === "function") {
+        event.stopImmediatePropagation();
+      }
+      navigateTopHome();
+    }, true);
+  }
+
+  function bindTopHomeNavigation(el) {
+    if (!el || el.getAttribute("data-eyc-home-bound") === "1") return;
+
+    installTopHomeInterceptor();
+    el.setAttribute("data-eyc-home-bound", "1");
+
+    if (el.matches && el.matches("a[href], [href]")) {
+      el.setAttribute("href", "/");
+      el.setAttribute("target", "_top");
+      el.removeAttribute("data-nested-link");
+    } else {
+      if (!el.getAttribute("role")) el.setAttribute("role", "link");
+      if (!el.hasAttribute("tabindex")) el.setAttribute("tabindex", "0");
+      el.style.cursor = "pointer";
+    }
+
+    function handleHomeActivation(event) {
+      if (event.defaultPrevented) return;
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      if (typeof event.button === "number" && event.button !== 0) return;
+      event.preventDefault();
+      event.stopPropagation();
+      if (typeof event.stopImmediatePropagation === "function") {
+        event.stopImmediatePropagation();
+      }
+      navigateTopHome();
+    }
+
+    el.onclick = handleHomeActivation;
+    el.addEventListener("click", handleHomeActivation, true);
+
+    el.onkeydown = function (event) {
+      if (event.defaultPrevented) return;
+      if (event.key !== "Enter" && event.key !== " ") return;
+      event.preventDefault();
+      event.stopPropagation();
+      if (typeof event.stopImmediatePropagation === "function") {
+        event.stopImmediatePropagation();
+      }
+      navigateTopHome();
+    };
+    el.addEventListener("keydown", el.onkeydown, true);
+  }
+
+  function fixHomeNavigation(root) {
+    if (!root || !root.querySelectorAll) return;
+
+    const candidates = new Set();
+    const homeHrefPattern = /^(\/|\.\/|\.\.\/|index\.html|\/index\.html|\.\/index\.html|\.\.\/index\.html)$/i;
+
+    root.querySelectorAll("a[href], [data-nested-link][href]").forEach((el) => {
+      const href = (el.getAttribute("href") || "").trim();
+      const text = norm(el.textContent || "").toLowerCase();
+      const isRootHref = homeHrefPattern.test(href);
+      const inNav = !!el.closest("nav");
+      const inFooter = !!el.closest("footer");
+      const hasHeaderLogo = !!el.querySelector('img[alt="Logo"]');
+      const looksFooterLogo = inFooter && /empower\s*your\s*core/i.test(text);
+      const looksHomeLink = text === "home" || text === "start";
+
+      if (
+        hasHeaderLogo ||
+        looksFooterLogo ||
+        (isRootHref && (inNav || inFooter || looksHomeLink))
+      ) {
+        candidates.add(el);
+      }
+    });
+
+    root.querySelectorAll('footer img[src*="yYoVC8J3eTfir4IZOrXjErhpLus"]').forEach((img) => {
+      const footerLogo = img.closest(".framer-ug0jy6") || img.parentElement;
+      if (footerLogo) candidates.add(footerLogo);
+    });
+
+    candidates.forEach(bindTopHomeNavigation);
+  }
+
   const INSTAGRAM_URL = eycLang === "en"
     ? "https://www.instagram.com/empowerbymo/"
     : "https://www.instagram.com/empoweryourcore.nl/";
@@ -4576,6 +4698,7 @@
     fixVideos(target);
     fixYouTubeMute(target);
     fixLinks(target);
+    fixHomeNavigation(target);
     forceDutchNavLabels(target);
     forceDutchCriticalCopy(target);
     fixSocialLinks(target);
